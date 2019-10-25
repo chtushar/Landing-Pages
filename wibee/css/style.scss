@@ -43,7 +43,7 @@ html, body{
     .logo{
       font-size: 1.2rem;
       line-height: 10vh;
-
+      opacity: 0;
       h1{
         a{
           text-decoration: none;
@@ -150,14 +150,16 @@ html, body{
       left: 50%;
       top: 25%;
       transform: translate(-50%, -50%);
+      opacity: 0;
     }
 
     .reveal-statement{
       position: absolute;
       top: 35%;
       left: 50%;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%,100%);
       text-align: center;
+      opacity: 0;
       &>p{
         font-size: 3.5rem;
         font-weight: 700;

@@ -81,7 +81,7 @@ html, body {
   width: 2.5rem;
 }
 
-.navigation {
+#navigation {
   width: 600px;
   height: 100vh;
   background-color: #303030;
@@ -101,24 +101,24 @@ html, body {
           transform: translateX(100%);
 }
 
-.navigation nav {
+#navigation nav {
   text-align: right;
   margin: 0 5vw;
 }
 
-.navigation nav ul li {
+#navigation nav ul li {
   list-style: none;
   -webkit-transition: all 200ms;
   transition: all 200ms;
 }
 
-.navigation nav ul li a {
+#navigation nav ul li a {
   font-size: 3rem;
   text-decoration: none;
   color: white;
 }
 
-.navigation nav ul li:hover {
+#navigation nav ul li:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);

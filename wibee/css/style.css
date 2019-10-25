@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  height: 100vh;
+  width: 100%;
+  font-family: Poppins;
+  overflow: hidden;
+  font-size: 12px;
+}
+
+.container {
+  width: 90%;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.header {
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header .logo {
+  font-size: 1.2rem;
+  line-height: 10vh;
+}
+
+.header .logo h1 a {
+  text-decoration: none;
+  color: #303030;
+}
+
+.header .menu-button {
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50%;
+  margin: auto 0;
+  color: #303030;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.header .menu-button .menu-line {
+  width: 2.5rem;
+  height: 5px;
+  background-color: #303030;
+  margin: auto 5px;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+}
+
+.header .menu-button:hover .menu-line {
+  width: 2rem;
+}
+
+.header .open {
+  color: #9700b6;
+}
+
+.header .open .menu-line {
+  width: 2rem;
+  background-color: #9700b6;
+}
+
+.header .open:hover .menu-line {
+  width: 2.5rem;
+}
+
+#navigation {
+  width: 600px;
+  height: 100vh;
+  background-color: #303030;
+  z-index: 900;
+  position: absolute;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+#navigation nav {
+  text-align: right;
+  margin: 0 5vw;
+}
+
+#navigation nav ul li {
+  list-style: none;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+#navigation nav ul li a {
+  font-size: 3rem;
+  text-decoration: none;
+  color: white;
+}
+
+#navigation nav ul li:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.main .hero {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 800;
+}
+
+.main .hero img {
+  height: 40vh;
+  width: auto;
+}
+
+.main .statement {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #303030;
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.main .reveal-statement {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.main .reveal-statement > p {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #9700b6;
+}
+
+.main .reveal-statement .get-started {
+  width: 150px;
+  height: 50px;
+  margin: 0 auto;
+  background: linear-gradient(45deg, #9700b6, #9700b6);
+  color: white;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-transition: -webkit-box-shadow 500ms;
+  transition: -webkit-box-shadow 500ms;
+  transition: box-shadow 500ms;
+  transition: box-shadow 500ms, -webkit-box-shadow 500ms;
+}
+
+.main .reveal-statement .get-started p {
+  line-height: 50px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  -webkit-transform: translateX(-7.5%);
+          transform: translateX(-7.5%);
+  background: url(../img/arrow.svg);
+  background-size: 0.6em;
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 50%;
+}
+
+.main .reveal-statement .get-started:hover {
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+@media screen and (min-width: 375px) {
+  html {
+    font-size: 14px;
+  }
+  .menu-button {
+    line-height: 5vh;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  html {
+    font-size: 16px;
+  }
+  .container .main .statement {
+    top: 20%;
+  }
+  .container .hero img {
+    height: 50vh;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  html {
+    font-size: 16px;
+  }
+  .container .main .statement {
+    top: 20%;
+    font-size: 3.5rem;
+  }
+  .container .main .hero img {
+    height: 50vh;
+  }
+  .container .main .reveal-statement > p {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+  .container .main .statement {
+    top: 45%;
+    left: 30%;
+  }
+  .container .main .hero img {
+    height: 60vh;
+  }
+  .container .main .reveal-statement {
+    top: 50%;
+    left: 75%;
+  }
+  .container .main .reveal-statement > p {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container .main .statement {
+    top: 45%;
+    left: 32%;
+    font-size: 4rem;
+  }
+  .container .main .hero img {
+    height: 70vh;
+  }
+  .container .main .reveal-statement {
+    top: 50%;
+    left: 70%;
+  }
+  .container .main .reveal-statement > p {
+    font-size: 4.5rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

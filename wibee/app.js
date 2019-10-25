@@ -1,3 +1,9 @@
+window.addEventListener('load', () => {
+  var container = document.querySelector('.container');
+
+  container.style.display = 'block';
+});
+
 var menuButton = document.querySelector('.menu-button');
 
 function menuOpenClose() {

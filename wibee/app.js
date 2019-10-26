@@ -18,7 +18,7 @@ window.addEventListener('load', () => {
     ease: Power2.easeInOut,
   });
 
-  TweenMax.staggerFrom('.background-div', 2, {
+  TweenMax.staggerFrom('.background-div', 3, {
     height: '0%',
     backgroundColor: '#FF9CF8',
   });

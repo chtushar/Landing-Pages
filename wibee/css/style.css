@@ -78,12 +78,12 @@ html, body {
 }
 
 .header .open {
-  color: #9700b6;
+  color: white;
 }
 
 .header .open .menu-line {
   width: 2rem;
-  background-color: #9700b6;
+  background-color: white;
 }
 
 .header .open:hover .menu-line {
@@ -246,6 +246,9 @@ html, body {
   }
   .menu-button {
     line-height: 5vh;
+  }
+  .get-started p {
+    font-size: 1.5rem;
   }
 }
 

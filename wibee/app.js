@@ -3,7 +3,7 @@ window.addEventListener('load', () => {
 
   container.style.display = 'block';
 
-  TweenMax.to('.logo', 1, {
+  TweenMax.to('.logo', 2, {
     opacity: 1,
     ease: Power2.easeInOut,
   });
@@ -12,9 +12,15 @@ window.addEventListener('load', () => {
     y: '-50%',
     ease: Circ.easeOut,
   });
+
   TweenMax.to('.statement', 2, {
     opacity: 1,
-    ease: Circ.easeOut,
+    ease: Power2.easeInOut,
+  });
+
+  TweenMax.staggerFrom('.background-div', 2, {
+    height: '0%',
+    backgroundColor: '#FF9CF8',
   });
 });
 
@@ -31,6 +37,12 @@ function menuOpenClose() {
       x: '0%',
       ease: Power2.easeInOut,
     });
+    TweenMax.staggerFrom(
+      '#navigation nav ul li',
+      0.2,
+      { x: '100%', delay: 0.2, ease: Back.easeOut.config(1.7) },
+      0.25,
+    );
   }
   menuButton.classList.toggle('open');
 }

@@ -134,6 +134,31 @@ html, body {
   text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
+.background {
+  z-index: -10;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.background .background-div {
+  width: 100%;
+  height: 16.66667%;
+  background-color: white;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
 .main .hero {
   position: absolute;
   bottom: 0;

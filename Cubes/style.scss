@@ -1,0 +1,237 @@
+$cube-dimension : 40px;
+$red: #F80F0F;
+$yellow: #F1FA00;
+$green: #09FF00;
+$blue: #003CFF;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  background-color: #000114;
+  height: 100vh;
+  width: 100%;
+}
+
+#app{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  margin: 0 auto;
+  width: 100%;
+  height: 30%;
+  //background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  // display: grid;
+  // grid-template-columns: 1fr 1fr;
+}
+
+.cube{
+  width: $cube-dimension;
+  height: $cube-dimension;
+  cursor: pointer;
+
+}
+
+#red{
+  transform-style: preserve-3d;
+  // position: absolute;
+  // top: 50%;
+  // left: 250px;
+  transform: translate(-50%,-50%);
+  animation: rotate 20s linear infinite ;
+  .face{
+    position: absolute;
+    background-color: $red;
+    width: $cube-dimension;
+    height: $cube-dimension;
+    opacity: 0.5;
+    border: 1px solid $red;
+    box-shadow: 5px 10px 100px 10px $red;
+  }
+  .top{
+    transform: translateY(-$cube-dimension) rotateX(-90deg);
+    transform-origin: bottom;
+  }
+  .left{
+    transform: translateX(-$cube-dimension) rotateY(90deg);
+    transform-origin: right;
+  }
+  .right{
+    transform: translateX($cube-dimension) rotateY(-90deg);
+    transform-origin: left;
+  }
+  .bottom{
+    transform: translateY($cube-dimension) rotateX(90deg);
+    transform-origin: top;
+  }
+}
+
+#green{
+  transform-style: preserve-3d;
+  // position: absolute;
+  // top: 50%;
+  // left: 500px;
+  transform: translate(-50%,-50%);
+  animation: rotate2 20s linear infinite;
+
+  .face{
+    position: absolute;
+    background-color: $green;
+    width: $cube-dimension;
+    height: $cube-dimension;
+    opacity: 0.5;
+    border: 1px solid $green;
+    box-shadow: 5px 10px 100px 10px $green;
+  }
+  .top{
+    transform: translateY(-$cube-dimension) rotateX(-90deg);
+    transform-origin: bottom;
+  }
+  .left{
+    transform: translateX(-$cube-dimension) rotateY(90deg);
+    transform-origin: right;
+  }
+  .right{
+    transform: translateX($cube-dimension) rotateY(-90deg);
+    transform-origin: left;
+  }
+  .bottom{
+    transform: translateY($cube-dimension) rotateX(90deg);
+    transform-origin: top;
+  }
+}
+
+#yellow{
+  transform-style: preserve-3d;
+  // position: absolute;
+  // top: 50%;
+  // left: 750px;
+  transform: translate(-250%,-250%);
+  animation: rotate3 20s linear infinite;
+
+  .face{
+    position: absolute;
+    background-color: $yellow;
+    width: $cube-dimension;
+    height: $cube-dimension;
+    opacity: 0.5;
+    border: 1px solid $yellow;
+    box-shadow: 5px 10px 100px 10px $yellow;
+  }
+  .top{
+    transform: translateY(-$cube-dimension) rotateX(-90deg);
+    transform-origin: bottom;
+  }
+  .left{
+    transform: translateX(-$cube-dimension) rotateY(90deg);
+    transform-origin: right;
+  }
+  .right{
+    transform: translateX($cube-dimension) rotateY(-90deg);
+    transform-origin: left;
+  }
+  .bottom{
+    transform: translateY($cube-dimension) rotateX(90deg);
+    transform-origin: top;
+  }
+}
+
+#blue{
+  transform-style: preserve-3d;
+  // position: absolute;
+  // top: 50%;
+  // left: 1000px;
+  transform: translate(-250%,-250%);
+  animation: rotate4 20s linear infinite;
+
+  .face{
+    position: absolute;
+    background-color: $blue;
+    width: $cube-dimension;
+    height: $cube-dimension;
+    opacity: 0.5;
+    border: 1px solid $blue;
+    box-shadow: 5px 10px 100px 10px $blue;
+  }
+  .top{
+    transform: translateY(-$cube-dimension) rotateX(-90deg);
+    transform-origin: bottom;
+  }
+  .left{
+    transform: translateX(-$cube-dimension) rotateY(90deg);
+    transform-origin: right;
+  }
+  .right{
+    transform: translateX($cube-dimension) rotateY(-90deg);
+    transform-origin: left;
+  }
+  .bottom{
+    transform: translateY($cube-dimension) rotateX(90deg);
+    transform-origin: top;
+  }
+}
+
+@keyframes rotate{
+  0%{
+    transform: rotateX(0) rotateY(0) rotateZ(30deg);
+  }
+  50%{
+    transform: rotateX(30deg) rotateY(360deg) rotateZ(60deg);
+  }
+  100%{
+    transform: rotateX(0) rotateY(0) rotateZ(30deg);
+  }
+}
+
+@keyframes rotate2{
+  0%{
+    transform: rotateX(0) rotateY(0) rotateZ(30deg);
+  }
+  50%{
+    transform: rotateX(30deg) rotateY(300deg) rotateZ(90deg);
+  }
+  100%{
+    transform: rotateX(0) rotateY(0) rotateZ(30deg);
+  }
+}
+
+@keyframes rotate3{
+  0%{
+    transform: rotateX(0) rotateY(0) rotateZ(30deg);
+  }
+  50%{
+    transform: rotateX(-30deg) rotateY(300deg) rotateZ(90deg);
+  }
+  100%{
+    transform: rotateX(0) rotateY(0) rotateZ(30deg);
+  }
+}
+
+@keyframes rotate4{
+  0%{
+    transform: rotateX(0) rotateY(0) rotateZ(30deg);
+  }
+  50%{
+    transform: rotateX(-30deg) rotateY(300deg) rotateZ(-90deg);
+  }
+  100%{
+    transform: rotateX(0) rotateY(0) rotateZ(30deg);
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+
+  $cube-dimension: 50px;
+  #app{
+    width: 50%;
+  }
+
+}
